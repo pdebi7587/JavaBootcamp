@@ -1,0 +1,22 @@
+package reviewWeek6;
+
+import java.util.Arrays;
+
+public class RandomShuffle {
+	
+	public static void main (String [] args) {
+		
+		Character [] arr = {'a', 'p', 's', 'r', 'z'};
+		
+		Arrays.sort(arr, 0, 4);
+		
+		System.out.println(arr.toString());
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment1.java[Problem2&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment1.java[Problem3&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment1.java[Problem4&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment1.java[Problem5&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment1.java[Assignment1&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment2.java[Problem2&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment2.java[Prob2&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment2.java[Prob3&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekone{Assignment2.java[Assignment2&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weektwo{DivisibleProblem.java[LeapYear&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekThree{ArraysNLoopsAssignment.java[Prob4&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekThree{ArraysNLoopsAssignment.java[Prob2&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekThree{ArraysNLoopsAssignment.java[Prob3&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;weekThree{ArraysNLoopsAssignment.java[Prob5&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;SBA_1Practice{PrintNumber.java[PrintNumber[NaturalSum&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;SBA_1Practice{PrintNumber.java[NaturalSum&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;SBA_1Practice{PrintNumber.java[NaturalSum[MultiplicationTable&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;SBA_1Practice{PrintNumber.java[MultiplicationTable&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;SBA_1Practice{PrintNumber.java[Factorial&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;SBA_1Practice{PrintNumber.java[Pattern&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;SBA_1Practice{sba12.java[sba12&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CivicHall/src&amp;lt;SBA_1Practice{sba12.java[abec&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="460"/>
+			<item key="DIALOG_Y_ORIGIN" value="69"/>
+			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+		</section>
+	</section>
+</section>

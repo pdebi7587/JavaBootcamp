@@ -1,0 +1,5 @@
+package weekFive.abstraction;
+
+public interface PersonDAO {
+
+}

@@ -1,0 +1,44 @@
+package SBA5_6;
+
+import java.util.Scanner;
+
+public class Testing {
+	
+	public static void main(String [] args) {
+		
+		//Create Scanner Class
+		Scanner in = new Scanner(System.in);
+		
+		float l , w , s, r;
+		
+		 l = in.nextFloat();
+		 w = in.nextFloat();
+		
+		shape rect = new Rectangle(l,w);
+		
+		
+		rect.getArea();
+		rect.getPerimeter();
+		rect.toString();
+		
+		s = in.nextFloat();
+		
+		shape squ = new Square(s);
+		squ.getArea();
+		squ.getPerimeter();
+		squ.toString();
+		
+		
+		
+		
+		
+		
+		
+		//Close Scanner
+		in.close();
+		
+		
+		
+	}
+
+}

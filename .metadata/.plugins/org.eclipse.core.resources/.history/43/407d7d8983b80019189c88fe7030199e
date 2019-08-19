@@ -1,0 +1,43 @@
+package coreJava.DAO;
+
+import coreJava.Models.Course;
+import coreJava.Models.Student;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class CourseDAO {
+	
+	List<Course> courses;
+
+	public List<Course> getAllCourses(){
+	String location = "/Users/student_113/eclipse-workspace/CivicHall/src/coreJava/courses.csv";
+	File file = new File(location);
+			  
+	try {
+		Scanner input= new Scanner(file);
+				
+		while (input.hasNextLine()) {
+					  
+			String [] line = input.nextLine().split(",");
+			Course theCourse = new Course(line[0],line[1],line[2]);
+			//courses.add(new Course(line[0],line[1],line[2]));
+			System.out.println(theCourse);
+			courses.add(theCourse);
+					   
+		}
+				  
+		input.close();
+	     
+				  
+				  
+	} catch (FileNotFoundException e) {
+				e.printStackTrace();
+	}
+	return courses;
+		
+    }
+}

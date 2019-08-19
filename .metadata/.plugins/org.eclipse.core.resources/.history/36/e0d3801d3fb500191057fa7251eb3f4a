@@ -1,0 +1,30 @@
+package student;
+
+import student.department.DepartmentDao;
+import student.department.DepartmentDeoImpl;
+import student.pack.StudentDao;
+import student.pack.StudentDaoImpl;
+
+public class SchoolDemo {
+	
+	public static void main(String [] args) {
+		
+		StudentDao sDAO = new StudentDaoImpl();
+		DepartmentDao dDAO = new DepartmentDeoImpl();
+		
+		sDAO.printList();
+		System.out.println();
+		dDAO.showAllDept();
+		System.out.println();
+		dDAO.addToDepartment(101, 1);
+		dDAO.addToDepartment(102, 1);
+		System.out.println();
+		dDAO.studentsofADept(1);
+		
+		
+		
+		
+		
+	}
+
+}

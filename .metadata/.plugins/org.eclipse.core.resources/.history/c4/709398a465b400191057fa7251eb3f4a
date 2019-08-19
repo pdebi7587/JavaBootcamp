@@ -1,0 +1,33 @@
+package weekSix.exceptionHandling;
+
+import java.util.Scanner;
+
+public class MainRunner {
+	
+	public static void main(String [] args) {
+		
+		Scanner scn = new Scanner(System.in);
+		
+		System.out.println("Please enter the first number: ");
+		int a = scn.nextInt();
+		
+		System.out.println("Please enterthe second number: ");
+		int b = scn.nextInt();
+		
+		System.out.println("1. Addition, 2.Division");
+		int c = scn.nextInt();
+		
+		Calculator calc = new Calculator();
+		
+		if (c == 1) {
+			calc.add(a, b);
+		}
+		
+		else if (c == 2) {
+			calc.division(a, b);
+		}
+		
+		scn.close();
+	}
+
+}

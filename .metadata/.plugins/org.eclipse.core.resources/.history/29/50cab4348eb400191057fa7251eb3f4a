@@ -1,0 +1,38 @@
+package student;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class DaoPatternDemo{
+
+	public static void main(String [] args) {
+		
+		StudentDao studentdao = new StudentDaoImpl();
+		
+		//Scanner input = new Scanner(System.in);
+		
+		//Print all students
+		for (Student student: studentdao.getAllStudents()) {
+			System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name: " + student.getName() + "]");
+		}
+		
+		//Update student
+		Student student = studentdao.getAllStudents().get(0);
+		student.setName("Lucy");
+		studentdao.updateStudentl(student);
+		
+		//Get student
+		studentdao.getStudent(0);
+		System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name: " + student.getName() +"]");
+		
+		
+		
+		
+		
+		
+	}
+
+	
+	
+	
+}

@@ -1,0 +1,93 @@
+package coreJava.DAO;
+
+import coreJava.Models.Attending;
+import coreJava.Models.Course;
+import coreJava.Models.Student;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class AttendingDAO {
+	
+	List<Attending> attending = new ArrayList<Attending>();
+
+	// attending = new ArrayList<Attending>();
+	  
+	  String location = "/Users/student_113/eclipse-workspace/CivicHall/src/coreJava/attending.csv";
+		File file = new File(location);
+	  public List<Attending> getAttending(){
+		  
+			try {
+				Scanner input= new Scanner(file);
+						
+				while (input.hasNextLine()) {
+							  
+					String [] line = input.nextLine().split(",");
+					attending.add(new Attending(line[0],line[1]));
+							   
+				}
+						  
+				input.close();
+			     
+						  
+						  
+			} catch (FileNotFoundException e) {
+						e.printStackTrace();
+			}
+			return attending;
+				
+		  
+	    }
+
+	    public void registerStudentToCourse(List<Attending> attending, String studentEmail, String courseID){
+	    		
+	    	Attending a = null;
+	    	
+	    	boolean found = false;
+			for(Attending s: attending) {
+				if((s.getStudentEmail() == studentEmail) && (s.getCourseID() == courseID)) {
+					found = true;
+					break;
+				}
+			}
+			
+			if (found == false){
+				a = new Attending(courseID,studentEmail);
+			}
+			
+			attending.add(a);
+	    	
+	    }
+
+	    public List<Course> getStudentCourses(List<Course> courseList, List<Attending> attending, String studentEmail){
+	    	Course c = null;
+	    	
+	    	for(Attending s: attending) {
+				if((s.getStudentEmail() == studentEmail)) {
+					c.add(s.getCourseID(),s.getStudentEmail());
+				}
+			}	
+	    }
+
+	    public void saveAttending(List<Attending> attending){
+	    	
+	    	
+	    	FileWriter writer = new FileWriter(file, true);
+			
+			
+	
+			
+
+			Attending attending = new Attending(courseID,studentEmail );
+			
+			writer.write(String.format("%-10s,%-10s,%-10s \n", attending.getCourseID(),attending.studentEmail));
+			
+			writer.close();
+	    	
+
+	    }
+}

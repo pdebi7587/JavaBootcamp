@@ -1,0 +1,71 @@
+package student;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import student.pack.Student;
+import student.pack.StudentDao;
+
+public class DaoPatternDemo{
+
+	public static void main(String [] args) {
+		
+		StudentDao studentdao = new StudentDaoImpl();
+		
+		Scanner input = new Scanner(System.in);
+		
+		//Get all students
+		studentdao.printList();
+		
+		
+		
+		//Print all students
+		System.out.println("==============Business Need=============");
+		
+		
+		boolean keepAdding = true;
+		
+		while(keepAdding) {
+			System.out.println("Do you want to add a new student? Enter 1 to add a new student, 2 to skip. ");
+			int x = input.nextInt();
+			
+			if (x==2) {
+				keepAdding = false;	
+			}
+			
+			else {
+				System.out.println("Enter a student roll no:");
+				int roll
+				
+				
+				
+			}
+			
+		}
+		for (Student student: studentdao.getAllStudents()) {
+			System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name: " + student.getName() + "]");
+		}
+		
+		//Update student
+		
+		
+		
+		Student student = studentdao.getAllStudents().get(0);
+		student.setName("Alice");
+		studentdao.updateStudentl(student);
+		
+		//Get student
+		studentdao.getStudent(0);
+		System.out.println("Student: [RollNo : " + student.getRollNo() + ", Name: " + student.getName() +"]");
+		
+		
+		
+		
+		
+		
+	}
+
+	
+	
+	
+}

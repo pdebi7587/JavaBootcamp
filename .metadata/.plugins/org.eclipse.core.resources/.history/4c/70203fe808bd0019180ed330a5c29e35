@@ -1,0 +1,57 @@
+package reviewWeek6;
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Elfish {
+	
+	public final static HashSet<Character> hs = new HashSet<Character>();
+	
+	public static void main (String [] args) {
+		
+		//Create Scanner
+		Scanner in = new Scanner(System.in);
+		
+		String word = in.next();
+		
+		System.out.println(elfish("elf", word));
+		
+		
+		
+		
+		
+		
+		//Close Scanner
+		in.close();
+			
+		
+	}
+	
+	
+	
+	public static Boolean elfish(String elf, String message ) {
+		
+		Boolean found = false;
+		
+		for (int i=0; i<elf.length();i++) {
+		hs.add(elf.charAt(i));
+		}
+		
+		for (int i=0; i<message.length(); i++) {
+		if (hs.contains(message.charAt(i)) ) {	
+			found = true;
+			
+		}
+		
+		}
+		
+		
+		
+		
+		return found;
+		
+		
+		
+	}
+
+}

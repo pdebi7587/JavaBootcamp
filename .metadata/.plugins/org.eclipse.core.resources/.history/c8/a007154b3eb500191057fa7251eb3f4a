@@ -1,0 +1,123 @@
+package student.department;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import student.pack.Student;
+import student.pack.StudentDao;
+import student.pack.StudentDaoImpl;
+
+public class DepartmentDeoImpl implements DepartmentDao{
+
+	List<Department> departments;
+	List<Student> students = new ArrayList<Student>();
+	
+	public DepartmentDeoImpl(List<Department> departments) {
+		departments = new ArrayList<Department>();
+		
+		Department dept1 =  new Department(1,"CSE", new ArrayList<Student>());
+		Department dept2 = new Department(2, "EE", new ArrayList<Student>());
+		Department dept3 = new Department(3, "Art", new ArrayList<Student>());
+		
+		departments.add(dept1);
+		departments.add(dept2);
+		departments.add(dept3);
+		
+		
+	}
+	
+	
+	
+	public DepartmentDeoImpl() {
+		
+		
+	}
+
+	@Override
+	public List<Department> getAllDepartments() {
+		
+		return departments;
+	}
+
+	@Override
+	public Department getADepartment(int deptId) {
+		Department lookup = null;
+		for (Department d:departments) {
+			if(d.getDeptId() == deptId) {
+				lookup = d;
+			}
+		}
+		return lookup;
+	}
+
+	@Override
+	public void updateDepartment(int deptId, String deptName) {
+		Department departments = getADepartment(deptId);
+		departments.setdeptName(deptName);
+		System.out.println("Department Id: " + departments.getDeptId() + "updated in list with name "+ departments.getdeptName());
+		
+	}
+
+	@Override
+	public void deleteDepartment(int deptId) {
+		Department department = getADepartment(deptId);
+		departments.remove(department);
+		
+	}
+
+	@Override
+	public void addDepartment(String deptName, int deptId) {
+		Department d = null;
+		
+		for (Department de:departments) {
+			if (de.getDeptId() == deptId) {
+				System.out.println("Department already exists");
+			}
+			
+			else {
+				d = new Department(deptId,deptName,students);
+			}
+		}
+		departments.add(d);	
+	}
+
+
+
+	@Override
+	public void addToDepartment(int roll, int deptId) {
+		StudentDao studentdao = new StudentDaoImpl();
+		Student s =studentdao.getStudent(roll);
+		Department d = getADepartment(deptId);
+		d.getStudentList().add(s);
+		
+	}
+
+	@Override
+	public void removeFromDepartment(int roll, int deptId) {
+		StudentDao studentdao = new StudentDaoImpl();
+		Student s =studentdao.getStudent(roll);
+		Department d = getADepartment(deptId);
+		d.getStudentList().remove(s);
+		
+	}
+
+	@Override
+	public void studentsofADept(int deptId) {
+		System.out.println("==========Student List of Dept" + deptid + "==========");
+		System.out.println("Size of the Dept: "+ getADepartment(deptId).getStudentList().size());
+		for (Student s: getADepartment(deptId).getStudentList()) {
+			System.out.printf("[Roll: %d, Name:%S]%n", s.getRollNo(),s.getName());
+		}
+			
+	}
+	
+	@Override
+	public void showAllDept() {
+		System.out.println("================Department List================");
+		for (Department elm : getAllDepartments()) {
+			System.out.println("Department: [DeptId : " + elm.getDeptId() + ", Name : " + elm.getdeptName() + " ]");
+		}
+			
+	}
+
+}

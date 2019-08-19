@@ -1,0 +1,87 @@
+package student.pack;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentDaoImpl implements StudentDao{
+	
+	
+	List<Student> students;
+	
+	//Student student = getStudent(rollNo);
+	
+	public StudentDaoImpl() {
+		students = new ArrayList<Student>();
+		Student student1 = new Student("Max", 101);
+		Student student2 = new Student("Lucy",102);
+		Student student3 = new Student("Laila", 103);
+		Student student4 = new Student("Sam", 104);
+		Student student5 = new Student("Tim", 105);
+		
+		
+		students.add(student1);
+		students.add(student2);
+		students.add(student3);
+		students.add(student4);
+		students.add(student5);
+	
+	}
+		
+	public void addStudent(String name, int roll) {
+		
+		Student s = null;
+		
+		for (Student stud: students) {
+			if (stud.getRollNo() == roll) {
+				System.out.println("Roll no. already exists" );
+			}
+			else {
+				s = new Student(name,roll);
+			}
+		}
+		
+		students.add(s);
+	}
+	
+	@Override
+	public List<Student> getAllStudents() {
+		return students;
+	}
+
+
+	@Override
+	public Student getStudent(int rollNo) {
+		Student lookup = null;
+		for(Student s: students) {
+			if(s.getRollNo() == rollNo) {
+				lookup = s;
+			}
+		}
+		return lookup;
+	}
+
+
+
+	@Override
+	public void updateStudentl(int rollNo, String name) {
+		Student student = getStudent(rollNo);
+		student.setName(name);
+		System.out.println("Student: Roll No " + student.getRollNo() + ", updated in the database with the name: "+ name);
+	}
+
+	@Override
+	public void deleteStudent(int rollNo) {
+		Student student = getStudent(rollNo);
+		students.remove(student);
+		
+	}
+
+	@Override
+	public void printList() {
+		System.out.println("================Updated Student Database================");
+		for (Student elm : getAllStudents()) {
+			System.out.println("Student: [RollNo : " + (elm.getRollNo()) + ", Name : " + elm.getName() + " ]");
+		}		
+	}
+	
+}

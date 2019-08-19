@@ -1,0 +1,68 @@
+package SBA5_6;
+
+public class Rectangle implements shape{
+	
+	public static float length;
+	public static float width;
+
+
+	public Rectangle(float new_length, float new_width) {
+		Rectangle.length = new_length;
+		this.width = new_width;
+	}
+	
+	
+
+	public static float getLength() {
+		return length;
+	}
+
+
+
+	public void setLength(float length) {
+		Rectangle.length = length;
+	}
+
+
+
+	public static float getWidth() {
+		return width;
+	}
+
+
+
+	public void setWidth(float width) {
+		Rectangle.width = width;
+	}
+
+
+
+	@Override
+	public float getArea() {
+		
+		float area = getLength()*getWidth();
+		
+		System.out.println("Finding area of rectangle with length = {" + length + "} and width = {" + width +"}");
+		
+		return area;
+	}
+
+	@Override
+	public float getPerimeter() {
+		
+		//float perimeter = 2*(length+width);
+		
+		System.out.println("Finding perimeter of rectangle with length = {" + length +"} and width = {"+width +"}");
+		return 2*(length+width);
+	}
+	
+	@Override
+	public String toString() {
+		
+		String message = "Rectangle = [length: {"+length+"}, width: {"+width+"}, Area: {"+length*width+"}, Perimeter: {" + 2*(length+width)+ "}]";
+		
+		System.out.println(message);
+		return message;
+	}
+
+}

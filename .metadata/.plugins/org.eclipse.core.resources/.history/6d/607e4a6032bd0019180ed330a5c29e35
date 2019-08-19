@@ -1,0 +1,33 @@
+package reviewWeek6;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
+public class RandomShuffle {
+	
+	public static void main (String [] args) {
+		
+		char[] arr = {'a', 'p', 's', 'r', 'z'};
+		
+		List<char[]> al= new ArrayList<char []>();
+		
+		al = Arrays.asList(arr);
+		
+		System.out.println(al);
+		
+		//double rnd = Math.random()*120;
+		
+		java.util.Collections.shuffle(al);
+		
+		System.out.println(al);
+		
+	
+		
+		
+		
+		
+	}
+
+}

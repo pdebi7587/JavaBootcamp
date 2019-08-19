@@ -1,0 +1,58 @@
+package fileHandler;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CHFileHandler {
+	
+	public static void main(String [] args) {
+		
+	/*	try {
+			String location = "";
+			File file = new File(location);
+			file.createNewFile();
+			
+		}catch(IOException e) {
+			System.out.println("File not found!");
+		}
+		*/
+		
+		
+		
+		
+		
+		
+		try {
+			String location = "./courses.txt";
+			
+			File file = new File(location);
+			
+			Scanner input = new Scanner(file);
+			ArrayList<String []> data = new ArrayList<String []>();
+			
+			
+			input.close();
+			
+			while (input.hasNextLine()) {
+				String line = input.nextLine();
+				data.add(line.split("|"));	
+			}
+			
+			for (String [] line:data) {
+				System.out.println(line[0]+ " | " + line[1] + " | " + line[2]);
+			}
+			
+			
+			
+		}catch(FileNotFoundException e) {
+			System.out.println("File not found!");
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package coreJava.DAO;
+
+import coreJava.Models.Course;
+
+import java.util.List;
+
+public class CourseDAO {
+
+	public List<Course> getAllCourses(){
+
+    }
+}
